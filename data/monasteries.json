@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rumtek",
+    "name": "Rumtek Monastery",
+    "sect": "Kagyu",
+    "district": "East Sikkim",
+    "lat": 27.3179,
+    "lng": 88.6216,
+    "viewerUrl": "https://momento360.com/e/u/1f80c5f0b9a24d379f2b1d9f1a21f2a6?utm_campaign=embed",
+    "description": "Seat of the Karmapa in Sikkim, renowned for its golden stupa and Tibetan art.",
+    "history": "Originally built in the 16th century; rebuilt in the 20th century under the 16th Karmapa.",
+    "architecture": "Traditional Tibetan monastic style with vibrant murals, courtyard, and prayer halls.",
+    "practices": "Kagyu rituals, chants, and annual festivals including Tibetan New Year observances."
+  },
+  {
+    "id": "pemayangtse",
+    "name": "Pemayangtse Monastery",
+    "sect": "Nyingma",
+    "district": "West Sikkim",
+    "lat": 27.3007,
+    "lng": 88.2433,
+    "viewerUrl": "https://momento360.com/e/u/8e3f7f2c1b1a47a2a3b6f1c5e6d7a8b9?utm_campaign=embed",
+    "description": "One of the oldest Nyingma monasteries, close to Pelling, famed for the Sangtok Pelri model.",
+    "history": "Founded in the 17th century by Lhatsun Chempo, a revered Nyingma lama.",
+    "architecture": "Wooden structures with intricate carvings and ancient murals.",
+    "practices": "Nyingma rituals, meditative practices, and Cham dance during Losar."
+  },
+  {
+    "id": "tashiding",
+    "name": "Tashiding Monastery",
+    "sect": "Nyingma",
+    "district": "West Sikkim",
+    "lat": 27.2885,
+    "lng": 88.3199,
+    "viewerUrl": "https://momento360.com/e/u/2a9e8b7c6d5e4f3a2b1c0d9e8f7a6b5c?utm_campaign=embed",
+    "description": "Sacred site revered for Bhumchu festival and spiritual significance in Sikkim.",
+    "history": "Dates back to 17th century; associated with Guru Padmasambhava's blessings.",
+    "architecture": "Chortens, prayer flags, and hillside setting with panoramic views.",
+    "practices": "Bhumchu water festival, prayers, and pilgrimages."
+  }
+]
+

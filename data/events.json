@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ev-bhumchu",
+    "title": "Bhumchu Ceremony",
+    "date": "2026-02-22",
+    "monasteryId": "tashiding",
+    "description": "Annual sacred water ceremony signaling fortunes for the year."
+  },
+  {
+    "id": "ev-losar",
+    "title": "Losar (Tibetan New Year)",
+    "date": "2026-03-03",
+    "monasteryId": "pemayangtse",
+    "description": "Festive prayers and Cham dances to welcome the new year."
+  },
+  {
+    "id": "ev-kagyu-prayers",
+    "title": "Kagyu Prayers Week",
+    "date": "2026-05-10",
+    "monasteryId": "rumtek",
+    "description": "Week-long recitations and teachings at Rumtek Monastery."
+  }
+]
+
