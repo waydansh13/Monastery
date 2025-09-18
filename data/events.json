@@ -1,24 +1,182 @@
 [
   {
-    "id": "ev-bhumchu",
-    "title": "Bhumchu Ceremony",
-    "date": "2026-02-22",
-    "monasteryId": "tashiding",
-    "description": "Annual sacred water ceremony signaling fortunes for the year."
+    "id": "bhumchu-festival-2024",
+    "title": "Bhumchu Festival",
+    "date": "2024-02-22",
+    "endDate": "2024-02-24",
+    "monasteryId": "tashiding-monastery",
+    "type": "festival",
+    "description": "The sacred Bhumchu ceremony at Tashiding Monastery, where holy water is used to predict the year's fortunes. This is one of the most important festivals in Sikkim, attracting thousands of devotees.",
+    "significance": "The Bhumchu ceremony is believed to predict the fortunes of Sikkim for the coming year. The water level in the sacred vessel indicates whether the year will be prosperous or challenging.",
+    "activities": ["Sacred water ceremony", "Prayer sessions", "Cultural performances", "Pilgrimage rituals"],
+    "visitors": "Open to all devotees",
+    "duration": "3 days",
+    "audioGuide": {
+      "en": "The Bhumchu Festival is one of the most sacred events in Sikkim, where holy water is used to predict the year's fortunes at Tashiding Monastery.",
+      "hi": "भूमचु उत्सव सिक्किम का सबसे पवित्र त्योहारों में से एक है, जहाँ ताशीडिंग मठ में पवित्र जल से वर्ष के भाग्य का अनुमान लगाया जाता है।",
+      "ne": "भूमचु उत्सव सिक्किमको सबैभन्दा पवित्र उत्सवहरू मध्ये एक हो, जहाँ ताशीडिंग मठमा पवित्र पानीले वर्षको भाग्य अनुमान गरिन्छ।"
+    }
   },
   {
-    "id": "ev-losar",
+    "id": "losar-2024",
     "title": "Losar (Tibetan New Year)",
-    "date": "2026-03-03",
-    "monasteryId": "pemayangtse",
-    "description": "Festive prayers and Cham dances to welcome the new year."
+    "date": "2024-03-03",
+    "endDate": "2024-03-05",
+    "monasteryId": "pemayangtse-monastery",
+    "type": "festival",
+    "description": "Celebration of the Tibetan New Year with traditional prayers, Cham dances, and cultural performances at Pemayangtse Monastery.",
+    "significance": "Losar marks the beginning of the Tibetan New Year and is celebrated with great enthusiasm across all monasteries in Sikkim.",
+    "activities": ["Cham dance performances", "Prayer ceremonies", "Traditional feasts", "Cultural exhibitions"],
+    "visitors": "Open to all",
+    "duration": "3 days",
+    "audioGuide": {
+      "en": "Losar, the Tibetan New Year, is celebrated with traditional Cham dances and prayer ceremonies at monasteries across Sikkim.",
+      "hi": "लोसर, तिब्बती नव वर्ष, सिक्किम के मठों में पारंपरिक चाम नृत्य और प्रार्थना समारोहों के साथ मनाया जाता है।",
+      "ne": "लोसर, तिब्बती नयाँ वर्ष, सिक्किमका मठहरूमा पारम्परिक चाम नृत्य र प्रार्थना समारोहहरूसँग मनाइन्छ।"
+    }
   },
   {
-    "id": "ev-kagyu-prayers",
-    "title": "Kagyu Prayers Week",
-    "date": "2026-05-10",
-    "monasteryId": "rumtek",
-    "description": "Week-long recitations and teachings at Rumtek Monastery."
+    "id": "karmapa-birthday-2024",
+    "title": "Karmapa's Birthday Celebration",
+    "date": "2024-06-26",
+    "endDate": "2024-06-28",
+    "monasteryId": "rumtek-monastery",
+    "type": "ceremony",
+    "description": "Special prayers and ceremonies to celebrate the birthday of the Karmapa at Rumtek Monastery, the seat of the Karma Kagyu lineage.",
+    "significance": "The Karmapa is one of the most important figures in Tibetan Buddhism, and his birthday is celebrated with special prayers and ceremonies.",
+    "activities": ["Special prayers", "Relic viewing", "Teachings", "Cultural programs"],
+    "visitors": "Open to devotees",
+    "duration": "3 days",
+    "audioGuide": {
+      "en": "The Karmapa's birthday is celebrated with special prayers and ceremonies at Rumtek Monastery, the seat of the Karma Kagyu lineage.",
+      "hi": "कर्मापा का जन्मदिन रुमटेक मठ में विशेष प्रार्थनाओं और समारोहों के साथ मनाया जाता है।",
+      "ne": "कर्मापाको जन्मदिन रुमटेक मठमा विशेष प्रार्थनाहरू र समारोहहरूसँग मनाइन्छ।"
+    }
+  },
+  {
+    "id": "guru-padmasambhava-birthday-2024",
+    "title": "Guru Padmasambhava's Birthday",
+    "date": "2024-07-10",
+    "endDate": "2024-07-12",
+    "monasteryId": "pemayangtse-monastery",
+    "type": "ceremony",
+    "description": "Celebration of Guru Padmasambhava's birthday with special prayers, teachings, and cultural performances at Pemayangtse Monastery.",
+    "significance": "Guru Padmasambhava is considered the founder of Tibetan Buddhism and is highly revered in the Nyingma tradition.",
+    "activities": ["Special prayers", "Teachings on Guru Padmasambhava", "Cultural performances", "Pilgrimage rituals"],
+    "visitors": "Open to all devotees",
+    "duration": "3 days",
+    "audioGuide": {
+      "en": "Guru Padmasambhava's birthday is celebrated with special prayers and teachings at Nyingma monasteries across Sikkim.",
+      "hi": "गुरु पद्मसंभव का जन्मदिन सिक्किम के न्यिंगमा मठों में विशेष प्रार्थनाओं के साथ मनाया जाता है।",
+      "ne": "गुरु पद्मसंभवको जन्मदिन सिक्किमका न्यिंगमा मठहरूमा विशेष प्रार्थनाहरूसँग मनाइन्छ।"
+    }
+  },
+  {
+    "id": "monlam-chenmo-2024",
+    "title": "Monlam Chenmo (Great Prayer Festival)",
+    "date": "2024-08-15",
+    "endDate": "2024-08-17",
+    "monasteryId": "rumtek-monastery",
+    "type": "ceremony",
+    "description": "The Great Prayer Festival featuring intensive prayer sessions, teachings, and special ceremonies at Rumtek Monastery.",
+    "significance": "Monlam Chenmo is one of the most important prayer festivals in Tibetan Buddhism, dedicated to world peace and the flourishing of the Dharma.",
+    "activities": ["Intensive prayer sessions", "Special teachings", "Butter lamp offerings", "Merit accumulation practices"],
+    "visitors": "Open to devotees",
+    "duration": "3 days",
+    "audioGuide": {
+      "en": "Monlam Chenmo, the Great Prayer Festival, features intensive prayer sessions and teachings for world peace and the flourishing of the Dharma.",
+      "hi": "मोनलाम चेनमो, महान प्रार्थना उत्सव, विश्व शांति के लिए गहन प्रार्थना सत्रों की विशेषता है।",
+      "ne": "मोनलाम चेनमो, महान प्रार्थना उत्सव, विश्व शान्तिका लागि गहन प्रार्थना सत्रहरूको विशेषता हो।"
+    }
+  },
+  {
+    "id": "chaam-dance-festival-2024",
+    "title": "Chaam Dance Festival",
+    "date": "2024-09-20",
+    "endDate": "2024-09-22",
+    "monasteryId": "enchey-monastery",
+    "type": "festival",
+    "description": "Traditional Chaam dance performances by monks at Enchey Monastery, featuring colorful masks, elaborate costumes, and sacred dances.",
+    "significance": "Chaam dances are sacred performances that tell Buddhist stories and teachings through dance, representing the victory of good over evil.",
+    "activities": ["Chaam dance performances", "Mask exhibitions", "Cultural workshops", "Traditional music"],
+    "visitors": "Open to all",
+    "duration": "3 days",
+    "audioGuide": {
+      "en": "The Chaam Dance Festival features traditional sacred dances performed by monks in colorful masks and elaborate costumes.",
+      "hi": "चाम नृत्य उत्सव में भिक्षुओं द्वारा रंगीन मुखौटे और विस्तृत वेशभूषा में पारंपरिक पवित्र नृत्य प्रदर्शन किया जाता है।",
+      "ne": "चाम नृत्य उत्सवमा भिक्षुहरूले रंगीन मुखौटा र विस्तृत वेशभूषामा पारम्परिक पवित्र नृत्य प्रदर्शन गर्छन्।"
+    }
+  },
+  {
+    "id": "dalai-lama-birthday-2024",
+    "title": "Dalai Lama's Birthday Celebration",
+    "date": "2024-07-06",
+    "endDate": "2024-07-08",
+    "monasteryId": "labrang-monastery",
+    "type": "ceremony",
+    "description": "Special prayers and ceremonies to celebrate the birthday of His Holiness the Dalai Lama at Labrang Monastery.",
+    "significance": "The Dalai Lama is the spiritual leader of Tibet and is highly revered by all Buddhist traditions.",
+    "activities": ["Special prayers", "Peace prayers", "Cultural programs", "Merit dedication"],
+    "visitors": "Open to devotees",
+    "duration": "3 days",
+    "audioGuide": {
+      "en": "The Dalai Lama's birthday is celebrated with special prayers and peace ceremonies at Gelug monasteries across Sikkim.",
+      "hi": "दलाई लामा का जन्मदिन सिक्किम के गेलुग मठों में विशेष प्रार्थनाओं के साथ मनाया जाता है।",
+      "ne": "दलाई लामाको जन्मदिन सिक्किमका गेलुग मठहरूमा विशेष प्रार्थनाहरूसँग मनाइन्छ।"
+    }
+  },
+  {
+    "id": "sakya-new-year-2024",
+    "title": "Sakya New Year Celebration",
+    "date": "2024-11-15",
+    "endDate": "2024-11-17",
+    "monasteryId": "sakya-monastery",
+    "type": "festival",
+    "description": "Celebration of the Sakya New Year with traditional prayers, teachings, and cultural performances at Sakya Monastery.",
+    "significance": "The Sakya New Year is celebrated according to the Sakya calendar and marks the beginning of a new year in the Sakya tradition.",
+    "activities": ["Traditional prayers", "Sakya teachings", "Cultural performances", "New Year blessings"],
+    "visitors": "Open to all",
+    "duration": "3 days",
+    "audioGuide": {
+      "en": "The Sakya New Year is celebrated with traditional prayers and teachings according to the Sakya calendar and tradition.",
+      "hi": "साक्या नव वर्ष साक्या कैलेंडर और परंपरा के अनुसार पारंपरिक प्रार्थनाओं के साथ मनाया जाता है।",
+      "ne": "साक्या नयाँ वर्ष साक्या क्यालेन्डर र परम्परा अनुसार पारम्परिक प्रार्थनाहरूसँग मनाइन्छ।"
+    }
+  },
+  {
+    "id": "winter-retreat-2024",
+    "title": "Winter Meditation Retreat",
+    "date": "2024-12-01",
+    "endDate": "2024-12-31",
+    "monasteryId": "rumtek-monastery",
+    "type": "retreat",
+    "description": "Month-long meditation retreat at Rumtek Monastery, focusing on Mahamudra practice and intensive meditation sessions.",
+    "significance": "Winter retreats are traditional in Tibetan Buddhism, providing an opportunity for intensive practice during the quiet winter months.",
+    "activities": ["Intensive meditation", "Mahamudra teachings", "Silent practice", "Group sessions"],
+    "visitors": "Advanced practitioners only",
+    "duration": "1 month",
+    "audioGuide": {
+      "en": "The winter meditation retreat offers intensive practice opportunities for advanced practitioners in the peaceful winter months.",
+      "hi": "शीतकालीन ध्यान साधना शांत शीतकालीन महीनों में उन्नत साधकों के लिए गहन अभ्यास के अवसर प्रदान करती है।",
+      "ne": "शीतकालीन ध्यान साधनाले शान्त शीतकालीन महिनाहरूमा उन्नत साधकहरूका लागि गहन अभ्यासका अवसरहरू प्रदान गर्छ।"
+    }
+  },
+  {
+    "id": "spring-blessing-2025",
+    "title": "Spring Blessing Ceremony",
+    "date": "2025-03-20",
+    "endDate": "2025-03-22",
+    "monasteryId": "tashiding-monastery",
+    "type": "ceremony",
+    "description": "Special blessing ceremony to welcome spring and seek blessings for the new season at Tashiding Monastery.",
+    "significance": "Spring blessing ceremonies are held to welcome the new season and seek blessings for prosperity and good health.",
+    "activities": ["Blessing ceremonies", "Prayer sessions", "Spring rituals", "Community gatherings"],
+    "visitors": "Open to all",
+    "duration": "3 days",
+    "audioGuide": {
+      "en": "The Spring Blessing Ceremony welcomes the new season and seeks blessings for prosperity and good health in the coming months.",
+      "hi": "वसंत आशीर्वाद समारोह नए मौसम का स्वागत करता है और आने वाले महीनों में समृद्धि और अच्छे स्वास्थ्य के लिए आशीर्वाद मांगता है।",
+      "ne": "वसन्त आशीर्वाद समारोहले नयाँ मौसमको स्वागत गर्छ र आउने महिनाहरूमा समृद्धि र राम्रो स्वास्थ्यका लागि आशीर्वाद माग्छ।"
+    }
   }
 ]
-

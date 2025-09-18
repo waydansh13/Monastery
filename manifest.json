@@ -1,14 +1,151 @@
 {
-  "name": "Monastery360",
+  "name": "Monastery360 - Digital Spiritual Journey",
   "short_name": "Monastery360",
-  "theme_color": "#0b3d2e",
-  "background_color": "#0e1a16",
+  "description": "Immersive cultural-heritage platform to explore Sikkim's sacred monasteries with 360° virtual tours, interactive maps, and AI guidance.",
+  "version": "1.0.0",
+  "start_url": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#1a4d3a",
+  "background_color": "#0a0f0c",
   "scope": "/",
-  "start_url": "/index.html",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["travel", "education", "culture", "religion"],
   "icons": [
-    { "src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
-  ]
+    {
+      "src": "/assets/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/screenshots/desktop-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Monastery360 Desktop View - Map and Monastery Details"
+    },
+    {
+      "src": "/assets/screenshots/mobile-1.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Monastery360 Mobile View - Interactive Monastery Explorer"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Explore Monasteries",
+      "short_name": "Monasteries",
+      "description": "Browse all monasteries on the interactive map",
+      "url": "/?view=monasteries",
+      "icons": [
+        {
+          "src": "/assets/icons/icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Cultural Calendar",
+      "short_name": "Calendar",
+      "description": "View upcoming festivals and events",
+      "url": "/?view=calendar",
+      "icons": [
+        {
+          "src": "/assets/icons/icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "AI Guide",
+      "short_name": "Guide",
+      "description": "Chat with the virtual monastery guide",
+      "url": "/?view=chatbot",
+      "icons": [
+        {
+          "src": "/assets/icons/icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "text/plain": [".txt"],
+        "application/json": [".json"]
+      }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+monastery360",
+      "url": "/?monastery=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
 }
-
