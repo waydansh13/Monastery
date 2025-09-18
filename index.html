@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a4d3a">
+    <meta name="description" content="Monastery360 - Immersive cultural-heritage platform to explore Sikkim's sacred monasteries with 360° virtual tours, interactive maps, and AI guidance.">
+    
+    <title>Monastery360 - Digital Spiritual Journey Through Sikkim's Monasteries</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/icon-512.png">
+    <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+    
+    <!-- External Dependencies -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin="anonymous">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>🏛️ Monastery360</h1>
+                <p class="tagline">Digital Spiritual Journey Through Sikkim's Sacred Monasteries</p>
+            </div>
+            <nav class="header-actions">
+                <button id="installBtn" class="btn btn-primary" style="display: none;">
+                    📱 Install App
+                </button>
+                <button id="settingsBtn" class="btn btn-secondary">
+                    ⚙️ Settings
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Application Layout -->
+    <main class="app-main">
+        <!-- Left Panel: Map and Filters -->
+        <section class="left-panel">
+            <!-- Search and Filters -->
+            <div class="filters-section">
+                <div class="search-container">
+                    <input type="search" id="searchInput" placeholder="Search monasteries, sects, or districts..." 
+                           class="search-input">
+                    <button id="searchBtn" class="btn btn-icon">🔍</button>
+                </div>
+                
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="sectFilter">Buddhist Sect:</label>
+                        <select id="sectFilter" class="filter-select">
+                            <option value="all">All Sects</option>
+                            <option value="Nyingma">Nyingma (Old School)</option>
+                            <option value="Kagyu">Kagyu (Oral Lineage)</option>
+                            <option value="Gelug">Gelug (Virtuous School)</option>
+                            <option value="Sakya">Sakya (Gray Earth)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="districtFilter">District:</label>
+                        <select id="districtFilter" class="filter-select">
+                            <option value="all">All Districts</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="statusFilter">Status:</label>
+                        <select id="statusFilter" class="filter-select">
+                            <option value="all">All</option>
+                            <option value="active">Active</option>
+                            <option value="heritage">Heritage Site</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Interactive Map -->
+            <div class="map-container">
+                <div id="monasteryMap" class="monastery-map"></div>
+                <div class="map-legend">
+                    <div class="legend-item">
+                        <span class="legend-color nyingma"></span>
+                        <span>Nyingma</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color kagyu"></span>
+                        <span>Kagyu</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color gelug"></span>
+                        <span>Gelug</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color sakya"></span>
+                        <span>Sakya</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Panel: Content and Features -->
+        <section class="right-panel">
+            <!-- Monastery Profile Section -->
+            <section class="monastery-profile" id="monasteryProfile">
+                <div class="profile-header">
+                    <h2>🏛️ Explore Sikkim's Sacred Monasteries</h2>
+                    <p>Select a monastery marker on the map to begin your spiritual journey. Each monastery offers unique insights into Tibetan Buddhist traditions, architecture, and cultural heritage.</p>
+                </div>
+                <div class="profile-content" id="profileContent">
+                    <div class="welcome-message">
+                        <div class="welcome-icon">🙏</div>
+                        <h3>Welcome to Monastery360</h3>
+                        <p>Choose a monastery from the map to discover its history, architecture, and spiritual significance. Use the audio guide for narrated experiences and explore 360° virtual tours.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 360° Virtual Tour Section -->
+            <section class="virtual-tour" id="virtualTour">
+                <div class="tour-header">
+                    <h3>🌐 360° Virtual Tour</h3>
+                    <p>Immerse yourself in the sacred spaces through interactive panoramic views</p>
+                </div>
+                <div class="tour-container">
+                    <div id="tourViewer" class="tour-viewer">
+                        <div class="tour-placeholder">
+                            <div class="placeholder-icon">📷</div>
+                            <p>Select a monastery to view its 360° virtual tour</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Audio Guide Section -->
+            <section class="audio-guide" id="audioGuide">
+                <div class="audio-header">
+                    <h3>🎧 Multilingual Audio Guide</h3>
+                    <p>Listen to narrated histories and cultural insights in your preferred language</p>
+                </div>
+                <div class="audio-controls">
+                    <div class="voice-selection">
+                        <label for="voiceSelect">Voice & Language:</label>
+                        <select id="voiceSelect" class="voice-select">
+                            <option value="">Loading voices...</option>
+                        </select>
+                    </div>
+                    <div class="speech-controls">
+                        <div class="rate-control">
+                            <label for="rateSlider">Speech Rate:</label>
+                            <input type="range" id="rateSlider" min="0.5" max="2.0" step="0.1" value="1.0">
+                            <span id="rateValue">1.0x</span>
+                        </div>
+                        <div class="audio-buttons">
+                            <button id="playAudio" class="btn btn-primary">▶️ Play</button>
+                            <button id="pauseAudio" class="btn btn-secondary">⏸️ Pause</button>
+                            <button id="stopAudio" class="btn btn-danger">⏹️ Stop</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="narration-text">
+                    <textarea id="narrationTextarea" placeholder="Audio narration text will appear here when you select a monastery..." 
+                              rows="4" readonly></textarea>
+                </div>
+            </section>
+
+            <!-- Cultural Calendar Section -->
+            <section class="cultural-calendar" id="culturalCalendar">
+                <div class="calendar-header">
+                    <h3>📅 Cultural Calendar</h3>
+                    <p>Discover upcoming festivals, ceremonies, and cultural events at Sikkim's monasteries</p>
+                </div>
+                <div class="calendar-filters">
+                    <select id="calendarFilter" class="calendar-filter">
+                        <option value="all">All Events</option>
+                        <option value="upcoming">Upcoming</option>
+                        <option value="festivals">Festivals</option>
+                        <option value="ceremonies">Ceremonies</option>
+                    </select>
+                </div>
+                <div class="calendar-events" id="calendarEvents">
+                    <div class="loading-events">Loading cultural events...</div>
+                </div>
+            </section>
+
+            <!-- AI Chatbot Section -->
+            <section class="ai-chatbot" id="aiChatbot">
+                <div class="chatbot-header">
+                    <h3>🤖 Virtual Monastery Guide</h3>
+                    <p>Ask questions about monasteries, cultural practices, or get personalized recommendations</p>
+                </div>
+                <div class="chatbot-container">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="chat-message bot-message">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                <p>Namaste! I'm your virtual monastery guide. I can help you explore Sikkim's sacred monasteries, explain cultural practices, suggest tours, and answer questions about Buddhist traditions. How may I assist you today?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chatInput" placeholder="Ask about monasteries, events, or cultural practices..." 
+                               class="chat-input">
+                        <button id="sendMessage" class="btn btn-primary">Send</button>
+                    </div>
+                    <div class="chatbot-status" id="chatbotStatus">
+                        <small>💡 Set your OpenAI API key in Settings to enable the AI guide</small>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Settings Modal -->
+    <dialog id="settingsModal" class="settings-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>⚙️ App Settings</h3>
+                <button id="closeSettings" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group">
+                    <label for="apiKeyInput">OpenAI API Key:</label>
+                    <input type="password" id="apiKeyInput" placeholder="sk-..." class="api-key-input">
+                    <small>Required for AI chatbot functionality. Your key is stored locally and securely.</small>
+                </div>
+                <div class="setting-group">
+                    <label for="defaultLanguage">Default Language:</label>
+                    <select id="defaultLanguage" class="language-select">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी (Hindi)</option>
+                        <option value="ne">नेपाली (Nepali)</option>
+                        <option value="bo">བོད་ཡིག (Tibetan)</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label for="themeSelect">Theme:</label>
+                    <select id="themeSelect" class="theme-select">
+                        <option value="dark">Dark (Default)</option>
+                        <option value="light">Light</option>
+                        <option value="auto">Auto</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="saveSettings" class="btn btn-primary">Save Settings</button>
+                <button id="cancelSettings" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading Monastery360...</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2024 Monastery360 - Preserving Sikkim's Sacred Heritage</p>
+                <p>Bridging spirituality with modern technology</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://openstreetmap.org" target="_blank" rel="noopener">Map Data © OpenStreetMap</a>
+                <a href="#" id="aboutLink">About</a>
+                <a href="#" id="helpLink">Help</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin="anonymous"></script>
+    
+    <!-- Application Script -->
+    <script src="/app.js"></script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
